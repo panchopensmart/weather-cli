@@ -1,0 +1,23 @@
+{
+  "name": "wearher-cli",
+  "version": "1.0.0",
+  "description": "CLI for getting weather",
+  "main": "index.js",
+  "bin": "./index.js",
+  "man": ["./README.md"],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Alexandr Polupanov",
+  "license": "ISC",
+  "homepage": "https://github.com/panchopensmart",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/panchopensmart"
+  },
+  "bugs": {
+    "url": "https://github.com/panchopensmart",
+    "email": "apel0491work@gmail.com"
+  }
+}
