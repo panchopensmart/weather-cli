@@ -1,26 +1,34 @@
-import chalk from 'chalk'
-import dedent from "dedent-js";
+import chalk from 'chalk';
+import dedent from 'dedent-js';
 
-const printError = (err) => {
-    console.log((chalk.bgRed('ERROR'),' - ', err))
-}
+const printError = (error) => {
+    console.log(chalk.bgRed(' ERROR ') + ' ' + error);
+};
 
-const printSuccess = (msg) => {
-    console.log((chalk.bgGreen('ERROR'),' - ', msg))
-}
+const printSuccess = (message) => {
+    console.log(chalk.bgGreen(' SUCCESS ') + ' ' + message);
+};
 
 const printHelp = () => {
     console.log(
-        dedent(
-            `${chalk.bgCyan('HELP')}
-            Без параметров - вывод погоды
-            -s [CITY] для установки грода
-            -h [CITY] для вывода помощи
-            -t [API_KEY] для сохранения токена
-            `
-        )
-        
-    )
-}
+        dedent`${chalk.bgCyan(' HELP ')}
+		Без параметров - вывод погоды
+		-s [CITY] для установки города
+		-h для вывода помощи
+		-t [API_KEY] для сохранения токена
+		`
+    );
+};
 
-export {printError, printSuccess, printHelp}
+const printWeather = (res, icon) => {
+    console.log(
+        dedent`${chalk.bgYellow(' WEATHER ')} Погода в городе ${res.name}
+		${icon}  ${res.weather[0].description}
+		Температура: ${res.main.temp} (ощущается как ${res.main.feels_like})
+		Влажность: ${res.main.humidity}%
+		Скорость ветра: ${res.wind.speed}
+		`
+    );
+};
+
+export { printError, printSuccess, printHelp, printWeather };
