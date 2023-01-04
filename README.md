@@ -4,7 +4,6 @@
 
 <div align="center">
   <img src="./screenRecordApp.gif">
-  <p >Приложение создано на платформе Node.js + Axios</p>
 </div>
 <br/>
 
